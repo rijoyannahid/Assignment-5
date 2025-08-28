@@ -74,4 +74,29 @@ $$('.call-btn').forEach(btn => {
 
 
 
-    
+     // Add to history (with exact time)
+    const li = document.createElement('li');
+    li.className = 'history-item';
+    li.innerHTML = `
+      <div>
+        <div class="name">${service}</div>
+        <div class="number">${number}</div>
+      </div>
+      <div class="time">${nowTime()}</div>
+    `;
+    historyList.prepend(li);
+  });
+});
+
+// ---- Clear history ----
+$('#clearHistory').addEventListener('click', () => {
+  historyList.innerHTML = '';
+});
+
+// ---- Copy pill (top-right) shows count on click (no side-effects) ----
+$('#copyPill').addEventListener('click', () => {
+  alert(`Total copies: ${copies}`);
+});
+
+// ---- init ----
+updateStats();
