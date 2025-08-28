@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Emergency Service Directory</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles/style.css" />
 </head>
 <body>
   <!-- ========= NAVBAR ========= -->
@@ -39,8 +39,66 @@
    <!-- ========= HERO ========= -->
   <section class="hero">
     <div class="crest">
-      <img src="assets/bd-emblem.png" alt="BD Emblem" />
+      <img src="assets/logo-dark.png" alt="BD Emblem" />
     </div>
     <h1>Emergency Service Directory</h1>
     <p>Government Emergency Services at Your Fingertip – A Project by Government of the People’s Republic of Bangladesh</p>
   </section>
+
+
+   <!-- ========= MAIN LAYOUT ========= -->
+  <main class="container">
+    <!-- Cards grid -->
+    <section class="cards">
+      <!-- CARD 1 -->
+      <article class="card" data-service="National Emergency Number" data-number="999">
+        <button class="card-heart" aria-label="like"></button>
+        <div class="card-head">
+          <!-- replace PNG path & tweak background color here -->
+          <div class="card-icon" style="background:#ffe9e9;">
+            <img src="assets/emergency.png" alt="Emergency" />
+          </div>
+          <div>
+            <h3>National Emergency Number</h3>
+            <small>National Emergency</small>
+          </div>
+        </div>
+
+        <div class="card-number">999</div>
+
+        <div class="chips">
+          <span class="chip">All</span>
+        </div>
+
+        <div class="action-row">
+          <button class="chip-btn copy-btn" type="button">Copy</button>
+          <button class="call-btn" type="button">
+            <span class="phone-ico" aria-hidden="true"></span>
+            Call
+          </button>
+        </div>
+      </article>
+
+
+         <!-- CARD 2 -->
+      <article class="card" data-service="Police Helpline Number" data-number="999">
+        <button class="card-heart" aria-label="like"></button>
+        <div class="card-head">
+          <div class="card-icon" style="background:#e9f2ff;">
+            <img src="assets/police.png" alt="Police" />
+          </div>
+          <div>
+            <h3>Police Helpline Number</h3>
+            <small>Police</small>
+          </div>
+        </div>
+
+        <div class="card-number">999</div>
+
+        <div class="chips"><span class="chip">Police</span></div>
+
+        <div class="action-row">
+          <button class="chip-btn copy-btn" type="button">Copy</button>
+          <button class="call-btn" type="button"><span class="phone-ico"></span>Call</button>
+        </div>
+      </article>
