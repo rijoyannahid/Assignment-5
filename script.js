@@ -21,3 +21,15 @@ const updateStats = () => {
   heartsEl.textContent = hearts;
   copyEl.textContent   = copies;
 };
+
+
+
+// ---- Heart toggle (increments/decrements navbar count) ----
+$$('.card-heart').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const active = btn.classList.toggle('active');
+    hearts += active ? 1 : -1;
+    if (hearts < 0) hearts = 0;
+    updateStats();
+  });
+});
