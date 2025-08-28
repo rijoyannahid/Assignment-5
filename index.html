@@ -2,7 +2,35 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Emergency Service Directory</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
+<body>
+  <!-- ========= NAVBAR ========= -->
+  <header class="nav">
+    <div class="nav-left">
+      <img src="assets/logo.png" alt="Logo" class="nav-logo" />
+      <div class="nav-brand">
+        <strong>Emergency</strong>
+        <span>Service</span>
+      </div>
+    </div>
+
+    <div class="nav-right">
+      <div class="counter-pill light" id="heartsPill">
+        <span class="num" id="heartsCount">0</span>
+        <span class="emo" aria-hidden="true">❤️</span>
+      </div>
+
+      <div class="counter-pill light" id="coinsPill">
+        <span class="num" id="coinsCount">100</span>
+        <span class="emo" aria-hidden="true">🟡</span>
+      </div>
+
+      <button class="counter-pill solid" id="copyPill" type="button" title="Total copies">
+        <span class="num" id="copyCount">0</span>
+        <span>Copy</span>
+      </button>
+    </div>
+  </header>

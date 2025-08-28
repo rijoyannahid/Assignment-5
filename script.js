@@ -1,11 +1,23 @@
-// --- State ---
-let likes = 0;
+// ---- State ----
 let coins = 100;
-let copies = 2;
+let hearts = 0;
+let copies = 0;
 
-// --- Elements ---
-const likeCountEl = document.getElementById('likeCount');
-const coinCountEl = document.getElementById('coinCount');
-const copyCountEl = document.getElementById('copyCount');
-const historyList = document.getElementById('historyList');
-const clearBtn = document.getElementById('clearHistory');
+// ---- Elements ----
+const $ = (q, ctx=document) => ctx.querySelector(q);
+const $$ = (q, ctx=document) => Array.from(ctx.querySelectorAll(q));
+
+const coinsEl  = $('#coinsCount');
+const heartsEl = $('#heartsCount');
+const copyEl   = $('#copyCount');
+const historyList = $('#historyList');
+
+// ---- Helpers ----
+const nowTime = () =>
+  new Date().toLocaleTimeString([], {hour:'2-digit', minute:'2-digit', second:'2-digit'});
+
+const updateStats = () => {
+  coinsEl.textContent  = coins;
+  heartsEl.textContent = hearts;
+  copyEl.textContent   = copies;
+};
