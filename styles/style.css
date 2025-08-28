@@ -110,3 +110,29 @@ html,body{margin:0;padding:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,s
   width:14px;height:14px;display:inline-block;border:2px solid currentColor;border-radius:3px;transform:rotate(45deg);
   border-left:0;border-bottom:0; 
 }
+
+
+
+
+/* ===== History Panel ===== */
+.history{
+  background:#fff;border:1px solid var(--border);border-radius:14px;box-shadow:var(--shadow);padding:14px;
+  display:flex;flex-direction:column;min-height:100%;
+}
+.history-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+.history-title{display:flex;align-items:center;gap:8px}
+.history-title h3{margin:0;font-size:16px}
+.clock{width:16px;height:16px;border:2px solid #a1a8b3;border-radius:50%;position:relative;display:inline-block}
+.clock::before{content:"";position:absolute;top:3px;left:7px;width:2px;height:5px;background:#a1a8b3;border-radius:2px}
+.clock::after{content:"";position:absolute;top:7px;left:7px;width:4px;height:2px;background:#a1a8b3;border-radius:2px}
+.clear-btn{
+  background:var(--green);color:#fff;border:0;border-radius:999px;padding:7px 14px;font-weight:700;cursor:pointer;box-shadow:0 6px 14px rgba(7,166,72,.3);
+}
+.history-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;overflow:auto;max-height:520px}
+.history-item{
+  background:#fafafa;border:1px solid var(--border);border-radius:12px;padding:10px 12px;
+  display:grid;grid-template-columns:1fr auto;gap:8px;align-items:center;
+}
+.history-item .name{font-weight:700}
+.history-item .number{color:#4b5563;font-size:13px}
+.history-item .time{font-size:12px;color:#6b7280}
