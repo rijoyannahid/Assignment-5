@@ -33,3 +33,45 @@ $$('.card-heart').forEach(btn => {
     updateStats();
   });
 });
+
+
+
+// ---- Copy button ----
+$$('.copy-btn').forEach(btn => {
+  btn.addEventListener('click', async (e) => {
+    const card = e.currentTarget.closest('.card');
+    const number = card.dataset.number;
+
+    try {
+      if (navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(number);
+      }
+      alert(`Hotline ${number} copied to clipboard ✅`);
+      copies += 1;
+      updateStats();
+    } catch {
+      alert(`Copy failed. Number: ${number}`);
+    }
+  });
+});
+
+// ---- Call button ----
+$$('.call-btn').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    const card = e.currentTarget.closest('.card');
+    const service = card.dataset.service;
+    const number  = card.dataset.number;
+
+    if (coins < 20) {
+      alert('Not enough coins to make a call. Need at least 20 coins.');
+      return;
+    }
+
+    coins -= 20;
+    updateStats();
+
+    alert(`Calling ${service} at ${number} ...`);
+
+
+
+    

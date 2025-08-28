@@ -136,3 +136,17 @@ html,body{margin:0;padding:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,s
 .history-item .name{font-weight:700}
 .history-item .number{color:#4b5563;font-size:13px}
 .history-item .time{font-size:12px;color:#6b7280}
+
+
+/* ===== Responsiveness ===== */
+@media (max-width:1100px){
+  .cards{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:860px){
+  .container{grid-template-columns:1fr;gap:14px}
+}
+@media (max-width:560px){
+  .cards{grid-template-columns:1fr}
+  .hero h1{font-size:22px}
+  .card-number{font-size:24px}
+}
